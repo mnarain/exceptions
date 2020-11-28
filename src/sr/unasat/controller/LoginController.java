@@ -1,5 +1,7 @@
 package sr.unasat.controller;
 
+import sr.unasat.exceptions.AuthenticationException;
+import sr.unasat.exceptions.SubscriptionException;
 import sr.unasat.services.AuthenticationService;
 
 public class LoginController {
@@ -14,8 +16,10 @@ public class LoginController {
         try {
             as.login(username,password);
             System.out.println("Welkom op de dashboard " + username);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        } catch (AuthenticationException e) {
+            System.out.println("Authentication Exception: " + e.getMessage());
+        } catch (SubscriptionException e) {
+            System.out.println("Subscription Exception: " + e.getMessage());
         }
     }
 }
