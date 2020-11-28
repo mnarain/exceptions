@@ -11,7 +11,7 @@ public class Application {
 
     public static void main(String[] args) throws Exception {
         GebruikersRepository.initialize(Arrays.asList(new Gebruiker("Nintendo","none",true)));
-        GebruikersRepository.initialize(Arrays.asList(new Gebruiker("Nintendo","none",true)));
+       // GebruikersRepository.initialize(Arrays.asList(new Gebruiker("Nintendo","none",true)));
         LoginController lc = new LoginController();
         lc.login("Nintendo", "none");
 
