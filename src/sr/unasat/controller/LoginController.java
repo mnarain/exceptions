@@ -5,7 +5,7 @@ import sr.unasat.exceptions.SubscriptionException;
 import sr.unasat.services.AuthenticationService;
 
 public class LoginController {
-    AuthenticationService as = new AuthenticationService();
+    AuthenticationService as;
 
     public LoginController() {
        this.as = new AuthenticationService();
